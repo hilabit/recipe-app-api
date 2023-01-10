@@ -1,9 +1,8 @@
 """
 Tests for the user API
 """
-from unittest import TestCase
 
-from django.test import TesetCase
+from django.test import TestCase
 from django.contrib.auth import get_user_model
 from django.urls import reverse
 
