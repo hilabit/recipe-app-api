@@ -1,5 +1,5 @@
 """
-Django commmand to wait for the Database to be available
+Django command to wait for the Database to be available
 """
 import time
 
