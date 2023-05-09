@@ -57,6 +57,7 @@ class PublicRecipeAPITests(TestCase):
 
         self.assertEqual(res.status_code, status.HTTP_401_UNAUTHORIZED)
 
+
     def test_retrieve_recipes(self):
         """Test retrieving a list of recipes"""
         create_recipe(user=self.user)
