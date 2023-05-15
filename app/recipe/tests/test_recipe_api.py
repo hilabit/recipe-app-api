@@ -175,7 +175,7 @@ class PrivateRecipeAPITests(TestCase):
         recipe.refresh_from_db()
         self.assertEqual(recipe.user, self.user)
 
-    def test_delete_reipe(self):
+    def test_delete_recipe(self):
         """Test deleting a recipe successful"""
         recipe = create_recipe(user=self.user)
         url = detail_url(recipe.id)
@@ -233,7 +233,7 @@ class PrivateRecipeAPITests(TestCase):
         recipes = Recipe.objects.filter(user=self.user)
         self.assertEqual(recipes.count(), 1)
         recipe = recipes[0]
-        self.assertEqual(recipes.tags.count(), 2)
+        self.assertEqual(recipe.tags.count(), 2)
         self.assertIn(tag_indian, recipe.tags.all())
         for tag in payload['tags']:
             exists = recipe.tags.filter(
